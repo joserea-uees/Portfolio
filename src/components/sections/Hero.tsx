@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
+import HeroCanvas from '../three/HeroCanvas'
 
 const container = {
   hidden: {},
@@ -15,33 +16,32 @@ const item = {
 
 export default function Hero() {
   return (
-    <motion.section
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className="min-h-screen flex flex-col justify-center px-8 md:px-16 relative overflow-hidden"
-    >
-      <motion.p variants={item} className="text-neutral-400 text-sm md:text-base tracking-widest uppercase mb-4">
-        Desarrollador Frontend
-      </motion.p>
+    <section className="min-h-screen flex flex-col justify-center px-8 md:px-16 relative overflow-hidden">
+      <HeroCanvas />
 
-      <motion.h1 variants={item} className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-[0.95] tracking-tight">
-        Construyo
-        <br />
-        experiencias
-        <br />
-        <span className="text-neutral-500">digitales.</span>
-      </motion.h1>
+      <motion.div variants={container} initial="hidden" animate="show" className="relative z-10">
+        <motion.p variants={item} className="text-neutral-400 text-sm md:text-base tracking-widest uppercase mb-4">
+          Desarrollador Frontend
+        </motion.p>
 
-      <motion.p variants={item} className="text-neutral-400 text-base md:text-lg max-w-md mt-8 leading-relaxed">
-        Diseño y desarrollo sitios web modernos, interactivos y con atención
-        al detalle. Explora mis proyectos abajo.
-      </motion.p>
+        <motion.h1 variants={item} className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-[0.95] tracking-tight">
+          Construyo
+          <br />
+          experiencias
+          <br />
+          <span className="text-neutral-500">digitales.</span>
+        </motion.h1>
 
-      <motion.div variants={item} className="flex gap-4 mt-10">
-        <Button href="#projects">Ver proyectos</Button>
-        <Button href="#contact" variant="secondary">Contáctame</Button>
+        <motion.p variants={item} className="text-neutral-400 text-base md:text-lg max-w-md mt-8 leading-relaxed">
+          Diseño y desarrollo sitios web modernos, interactivos y con atención
+          al detalle. Explora mis proyectos abajo.
+        </motion.p>
+
+        <motion.div variants={item} className="flex gap-4 mt-10">
+          <Button href="#projects">Ver proyectos</Button>
+          <Button href="#contact" variant="secondary">Contáctame</Button>
+        </motion.div>
       </motion.div>
-    </motion.section>
+    </section>
   )
 }
