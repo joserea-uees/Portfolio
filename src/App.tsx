@@ -1,11 +1,22 @@
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import Hero from './components/sections/Hero'
+import Projects from './components/sections/Projects'
+import About from './components/sections/About'
+import Contact from './components/sections/Contact'
 
 function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-white">
-        Portafolio en construcción
-      </h1>
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Projects />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
 
