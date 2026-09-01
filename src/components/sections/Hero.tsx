@@ -24,8 +24,7 @@ export default function Hero() {
           Desarrollador Frontend
         </motion.p>
 
-        <motion.h1 variants={item} className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-[0.95] tracking-tight">
-          Construyo
+        <motion.h1 variants={item} className="text-5xl md:text-7xl lg:text-9xl font-bold text-white leading-[0.95] tracking-tight">          Construyo
           <br />
           experiencias
           <br />
