@@ -6,9 +6,10 @@ interface ButtonProps {
   href?: string
   onClick?: () => void
   variant?: 'primary' | 'secondary'
+  type?: 'button' | 'submit'
 }
 
-export default function Button({ children, href, onClick, variant = 'primary' }: ButtonProps) {
+export default function Button({ children, href, onClick, variant = 'primary', type = 'button' }: ButtonProps) {
   const baseStyles = 'px-6 py-3 rounded-full font-medium inline-block'
   const variants = {
     primary: 'bg-white text-black',
@@ -32,7 +33,7 @@ export default function Button({ children, href, onClick, variant = 'primary' }:
   }
 
   return (
-    <motion.button onClick={onClick} className={classes} {...motionProps}>
+    <motion.button type={type} onClick={onClick} className={classes} {...motionProps}>
       {children}
     </motion.button>
   )
